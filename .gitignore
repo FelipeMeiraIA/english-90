@@ -1,0 +1,46 @@
+# Dependências
+node_modules/
+/.pnp
+.pnp.js
+
+# Build
+/.next/
+/out/
+/build
+dist/
+
+# Variáveis de ambiente — NUNCA commitar
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# Depuração
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Ferramentas de IA (histórico local, não deve ir ao repositório)
+.gemini/
+.cursor/
+.codex/
+.claude/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
