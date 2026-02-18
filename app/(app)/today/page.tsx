@@ -6,7 +6,7 @@ import { createClient } from '@/lib/supabase/client'
 import { getCurrentDayNumber, todayInBrasilia, itemTypeColor, getSpacedDates } from '@/lib/utils'
 import type { PlanDay, UserDayProgress, SpacedReview } from '@/lib/types'
 
-interface ReviewWithItem extends SpacedReview {
+interface ReviewWithItem extends Omit<SpacedReview, 'user_items'> {
   user_items: { term: string; item_type: string; example: string; meaning: string }
 }
 
