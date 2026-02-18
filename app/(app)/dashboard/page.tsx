@@ -97,7 +97,7 @@ export default function DashboardPage() {
   const progress = Math.round((s.daysCompleted / 90) * 100)
 
   return (
-    <div className="max-w-2xl mx-auto px-40 py-60 md:py-10 md:ml-10">
+    <div className="max-w-2xl mx-auto px-4 md:px-6 md:py-10">
       {/* Header */}
       <div className="max-w-2xl w-full">
         <div>
