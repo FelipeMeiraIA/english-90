@@ -43,7 +43,7 @@ Um Progressive Web App (PWA) para acompanhar um plano estruturado de 90 dias de 
 ### 1. Clone e instale as dependências
 
 ```bash
-git clone https://github.com/seu-usuario/english-90.git
+git clone https://github.com/FelipeMeiraIA/english-90.git
 cd english-90
 npm install
 ```

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { getCurrentDayNumber, phaseLabel, todayInBrasilia } from '@/lib/utils'
-import type { PlanDay, UserDayProgress } from '@/lib/types'
+import type { PlanDay } from '@/lib/types'
 
 type DayStatus = 'completed' | 'current' | 'future' | 'missed'
 
@@ -44,8 +44,8 @@ export default function CalendarPage() {
         .select('day_number, focus_title, theme, phase, week_number')
         .order('day_number')
 
-      const completedSet = new Set((progress ?? []).filter((p: UserDayProgress) => p.completed).map((p: UserDayProgress) => p.day_number))
-      const planMap = new Map((planDays ?? []).map((p: Partial<PlanDay>) => [p.day_number, p]))
+      const completedSet = new Set((progress ?? []).filter(p => p.completed).map(p => p.day_number))
+      const planMap = new Map((planDays ?? []).map(p => [p.day_number, p]))
 
       const built: CalDay[] = Array.from({ length: 90 }, (_, i) => {
         const n = i + 1
@@ -112,7 +112,7 @@ export default function CalendarPage() {
         ))}
       </div>
 
-      {/* Calendar grid by phase */}
+      {/* Calendar gridd by phase */}
       {phases.map(phase => {
         const start = (phase - 1) * 30
         const phaseDays = days.slice(start, start + 30)
