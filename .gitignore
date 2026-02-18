@@ -44,3 +44,6 @@ Thumbs.db
 .vscode/settings.json
 *.swp
 *.swo
+
+# Internos
+GUIA.md
